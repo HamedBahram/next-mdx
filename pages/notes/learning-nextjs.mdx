@@ -14,6 +14,8 @@ export const meta = {
   date: '2022-02-15',
 }
 
+![nextjs](/images/notes/learning-nextjs/nextjs.png)
+
 NextJS is a **framework for ReactJS**.
 
 Wait a second ... a "framework" for React? Isn't React itself already a framework for JavaScript?
@@ -57,4 +59,6 @@ A table:
 
 ... More content ...
 
-export default ({ children }) => <NoteLayout meta={meta}>{children}</NoteLayout>
+export default ({ children }) => {
+  return <NoteLayout meta={meta}>{children}</NoteLayout>
+}

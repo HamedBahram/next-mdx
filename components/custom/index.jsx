@@ -14,7 +14,14 @@ export const p = props => {
 }
 
 export const ResponsiveImage = props => (
-  <Image alt={props.alt} layout='responsive' {...props} />
+  <Image
+    src={props.src}
+    alt={props.alt}
+    width={389}
+    height={129}
+    layout='responsive'
+    className='rounded'
+  />
 )
 
 export const Code = ({ className, children, ...props }) => {
