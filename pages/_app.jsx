@@ -7,22 +7,20 @@ import { Heading, p, Code, ResponsiveImage } from '../components/custom'
 import '../styles/globals.css'
 
 const components = {
-    img: ResponsiveImage,
-    h1: Heading.H1,
-    code: Code,
-    p,
+  img: ResponsiveImage,
+  code: Code,
 }
 
 function MyApp({ Component, pageProps }) {
-    return (
-        <ThemeProvider attribute='class'>
-            <MDXProvider components={components}>
-                <Layout>
-                    <Component {...pageProps} />
-                </Layout>
-            </MDXProvider>
-        </ThemeProvider>
-    )
+  return (
+    <ThemeProvider attribute='class'>
+      <MDXProvider components={components}>
+        <Layout>
+          <Component {...pageProps} />
+        </Layout>
+      </MDXProvider>
+    </ThemeProvider>
+  )
 }
 
 export default MyApp
