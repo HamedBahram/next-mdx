@@ -1,0 +1,57 @@
+---
+title: 'learning mdx'
+description: 'MDX is the easiest way to write content'
+author: 'Hamed'
+date: '2022-02-12'
+---
+
+export const meta = {
+  title: 'learning mdx',
+  description: 'MDX is the easiest way to write content',
+  author: 'Hamed',
+  date: '2022-02-12',
+}
+
+# My MDX page
+
+This is a list in markdown:
+
+- One
+- Two
+- Three
+
+check out the `JSX`
+
+<div className='text-gray-400 bg-rose-200 w-1/2 p-4 my-4 rounded'>
+  This is using `TailwindCSS`
+</div>
+
+```js
+function greet() {
+  console.log('Hello')
+}
+```
+
+How about some HTML?
+
+```html
+<!DOCTYPE html>
+
+<div>
+  <h1>This is my Title</h1>
+</div>
+```
+
+let's spice it up with some CSS
+
+{meta.author} - {meta.date.toLocaleString('en-CA', {day: 'numeric', month: 'long', year: 'numeric'})}
+
+export default ({ children }) => (
+  <article
+    meta={meta}
+    className='prose max-w-none prose-pre:!p-0 dark:prose-invert'
+  >
+    {children}
+  </article>
+
+)

@@ -11,8 +11,8 @@ const Header = () => {
                         </Link>
                     </li>
                     <li>
-                        <Link href='/mdx-page'>
-                            <a>MDX Page</a>
+                        <Link href='/notes'>
+                            <a>Notes</a>
                         </Link>
                     </li>
                 </ul>
