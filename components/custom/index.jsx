@@ -17,10 +17,13 @@ export const ResponsiveImage = props => (
   <Image
     src={props.src}
     alt={props.alt}
-    width={389}
-    height={129}
+    title={props.title}
+    width={600}
+    height={300}
     layout='responsive'
-    className='rounded'
+    objectFit='cover'
+    objectPosition='center'
+    className='rounded-md'
   />
 )
 
@@ -37,7 +40,7 @@ export const Code = ({ className, children, ...props }) => {
       PreTag='div'
       style={ocean}
       customStyle={{
-        background: theme === 'light' ? '#2b303b' : '#fafafa',
+        // background: theme === 'light' ? '#20232a' : '#fff',
         borderRadius: '5px',
         padding: '1rem',
       }}

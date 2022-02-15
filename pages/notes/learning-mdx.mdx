@@ -1,21 +1,30 @@
 ---
-title: 'learning mdx'
-description: 'MDX is the easiest way to write content'
-author: 'Hamed'
+title: 'Learning MDX'
+excerpt: 'MDX is the easiest way to write content'
+coverImage: '/images/notes/learning-mdx/cover.png'
+ogImage: '/images/notes/learning-mdx/cover.png'
+author:
+  name: 'Hamed Bahram'
+  image: '/images/notes/authors/hamed.png'
 date: '2022-02-12'
 ---
 
-import NoteLayout from '../../components/layout/NoteLayout'
+import Image from 'next/image'
+import NoteLayout from '../../components/layout/notes/NoteLayout'
 import Test from '../../components/home/Test'
+import Confetti from 'react-confetti'
 
 export const meta = {
-  title: 'learning mdx',
-  description: 'MDX is the easiest way to write content',
-  author: 'Hamed',
+  title: 'Learning MDX',
+  excerpt: 'MDX is the easiest way to write content',
+  coverImage: '/images/notes/learning-mdx/cover.png',
+  ogImage: '/images/notes/learning-mdx/cover.png',
+  author: {
+    name: 'Hamed Bahram',
+    image: '/images/notes/authors/hamed.png',
+  },
   date: '2022-02-12',
 }
-
-# My MDX page
 
 ## This is a test component:
 
@@ -28,6 +37,20 @@ This is a list in markdown:
 - Three
 
 check out the `JSX`
+
+Nice HighlightJs themes:
+
+- dark
+- lioshi
+- github-dark
+- sunburst
+
+my personal favvorites
+
+<Confetti />
+
+- tomorrow-night
+- ocean
 
 <div className='text-white bg-emerald-400 rounded px-4'>
   This is using `TailwindCSS`
@@ -42,8 +65,6 @@ function greet() {
 How about some HTML?
 
 ```html
-<!DOCTYPE html>
-
 <div>
   <h1>This is my Title</h1>
 </div>
@@ -51,6 +72,10 @@ How about some HTML?
 
 let's spice it up with some CSS
 
-{meta.author} - {new Date(meta.date).toLocaleString('en-CA', {day: 'numeric', month: 'long', year: 'numeric'})}
+Check out this video:
+
+https://www.youtube.com/watch?v=dQw4w9WgXcQ
+
+{meta.author.name} - {new Date(meta.date).toLocaleString('en-CA', {day: 'numeric', month: 'long', year: 'numeric'})}
 
 export default ({ children }) => <NoteLayout meta={meta}>{children}</NoteLayout>
