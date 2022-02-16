@@ -1,5 +1,4 @@
 import Head from 'next/head'
-import React from 'react'
 import NoteBody from '../../notes/NoteBody'
 import NoteHeader from '../../notes/NoteHeader'
 
